@@ -4,6 +4,7 @@ pre_test:
   - "echo 'pre test'"
 
 test:
+  - "sleep 60"
   - "echo 'testing'"
 
 post_test:
