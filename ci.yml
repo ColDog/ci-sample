@@ -1,4 +1,4 @@
-base_image: base
+base_image: ubuntu
 
 pre_test:
   - "echo 'pre test'"
