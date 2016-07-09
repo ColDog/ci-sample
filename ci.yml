@@ -1,0 +1,16 @@
+base_image: base
+
+pre_test:
+  - "echo 'pre test'"
+
+test:
+  - "echo 'testing'"
+
+post_test:
+  - "echo 'post test'"
+  
+on_success:
+  - "echo 'on success'"
+
+on_failure:
+  - "echo 'on failure'"
