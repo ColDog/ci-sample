@@ -1,4 +1,4 @@
-default_build:
+default_build: &default_build
   base_image: ubuntu
   pre_test:
     - "echo 'pre test'"
@@ -13,6 +13,10 @@ default_build:
     - "echo 'on failure'"
 
 builds:
-  - &default_build
+  - <<: *default_build
     test:
       - "sleep 25"
+
+  - <<: *default_build
+    test:
+      - "sleep 60"
