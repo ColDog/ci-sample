@@ -1,17 +1,18 @@
-base_image: ubuntu
+default_build:
+  base_image: ubuntu
+  pre_test:
+    - "echo 'pre test'"
+  test:
+    - "sleep 5"
+    - "echo 'testing'"
+  post_test:
+    - "echo 'post test'"
+  on_success:
+    - "echo 'on success'"
+  on_failure:
+    - "echo 'on failure'"
 
-pre_test:
-  - "echo 'pre test'"
-
-test:
-  - "sleep 5"
-  - "echo 'testing'"
-
-post_test:
-  - "echo 'post test'"
-  
-on_success:
-  - "echo 'on success'"
-
-on_failure:
-  - "echo 'on failure'"
+builds:
+  - &default_build
+    test:
+      - "sleep 25"
