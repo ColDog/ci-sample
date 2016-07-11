@@ -14,8 +14,8 @@ default_build: &default_build
 builds:
   - <<: *default_build
     test:
-      - "sleep 25"
+      - "sleep 6"
 
   - <<: *default_build
     test:
-      - "sleep 60"
+      - "sleep 7"
