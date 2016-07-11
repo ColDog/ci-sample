@@ -1,5 +1,4 @@
 default_build: &default_build
-  base_image: ubuntu
   pre_test:
     - "echo 'pre test'"
   test:
