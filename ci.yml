@@ -19,8 +19,8 @@ builds:
       
     test:
       - "sleep 6"
-      - "echo $stuff"
-      - "echo $name"
+      - "echo $STUFF"
+      - "echo $NAME"
 
   - <<: *default_build
     test:
