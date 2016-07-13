@@ -13,8 +13,14 @@ default_build: &default_build
 
 builds:
   - <<: *default_build
+    env:
+      name: 'coldog'
+      stuff: 'things'
+      
     test:
       - "sleep 6"
+      - "echo $stuff"
+      - "echo $name"
 
   - <<: *default_build
     test:
