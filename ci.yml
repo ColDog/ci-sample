@@ -1,10 +1,10 @@
 default_build: &default_build
-  pre_test:
+  before:
     - "echo 'pre test'"
-  test:
+  main:
     - "sleep 5"
     - "echo 'testing'"
-  post_test:
+  after:
     - "echo 'post test'"
   on_success:
     - "echo 'on success'"
@@ -17,11 +17,11 @@ builds:
       name: 'coldog'
       stuff: 'things'
       
-    test:
+    main:
       - "sleep 6"
       - "echo $STUFF"
       - "echo $NAME"
 
   - <<: *default_build
-    test:
+    main:
       - "sleep 7"
