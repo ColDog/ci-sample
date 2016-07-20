@@ -40,3 +40,8 @@ builds:
   - <<: *default_build
     main:
       - "sleep 7"
+
+  # build number 3  
+  - <<: *default_build
+    main:
+      - "exit 127"
