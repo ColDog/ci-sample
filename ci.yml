@@ -1,4 +1,17 @@
 default_build: &default_build
+  services:
+    - image: 'mysql:5.7'
+      env:
+        MYSQL_DEFAULT_PASSWORD: pass
+      on_startup:
+        - "echo 'hello from mysql'"
+  
+  env:
+    TEST: true
+  
+  setup:
+    - "echo 'setup'"
+  
   before:
     - "echo 'pre test'"
   main:
@@ -12,16 +25,18 @@ default_build: &default_build
     - "echo 'on failure'"
 
 builds:
+  # build number 1
   - <<: *default_build
     env:
-      name: 'coldog'
-      stuff: 'things'
+      NAME: 'coldog'
+      STUFF: 'things'
       
     main:
       - "sleep 6"
       - "echo $STUFF"
       - "echo $NAME"
-
+  
+  # build number 2
   - <<: *default_build
     main:
       - "sleep 7"
