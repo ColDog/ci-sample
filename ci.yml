@@ -1,6 +1,7 @@
 default_build: &default_build
   services:
-    - image: 'mysql:5.7'
+    mysql:
+      image: 'mysql:5.7'
       env:
         MYSQL_DEFAULT_PASSWORD: pass
       on_startup:
