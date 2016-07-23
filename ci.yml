@@ -2,9 +2,6 @@ default_build: &default_build
   env:
     TEST: true
   
-  setup:
-    - "echo 'setup'"
-  
   before:
     - "echo 'pre test'"
   main:
