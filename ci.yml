@@ -1,0 +1,8 @@
+setup:
+  - echo 'setup'
+
+test:
+  - echo 'testing'
+
+after:
+  - echo 'after'
