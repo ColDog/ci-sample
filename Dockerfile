@@ -1,2 +1,2 @@
 FROM ubuntu
-CMD ["ls", "-a"]
+CMD ["sh", "-c", "while true; do sleep 1; echo 'waiting'; done"]
