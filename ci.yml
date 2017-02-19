@@ -1,8 +1,9 @@
-setup:
-  - echo 'setup'
+commands:
+  setup:
+    - echo 'setup'
 
-test:
-  - echo 'testing'
+  test:
+    - echo 'testing'
 
-after:
-  - echo 'after'
+  after:
+    - echo 'after'
