@@ -1,5 +1,5 @@
 build:
-  id: appp
+  id: app
   image: ubuntu
 
 commands:
